@@ -13,7 +13,24 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(main src/main.cpp)
+# Set up separate variables for different file groups
+set(SRC_FILES
+    src/main.cpp
+    src/GameObject/GameObject.cpp
+    src/InputController/InputController.cpp
+    src/Player/Player.cpp
+    src/Renderer/Renderer.cpp
+)
+
+set(HEADER_FILES
+    # No main header file
+    src/GameObject/GameObject.h
+    src/InputController/InputController.h
+    src/Player/Player.h
+    src/Renderer/Renderer.h
+)
+
+add_executable(main ${SRC_FILES} ${HEADER_FILES})
 target_link_libraries(main PRIVATE sfml-graphics)
 target_compile_features(main PRIVATE cxx_std_17)
 
