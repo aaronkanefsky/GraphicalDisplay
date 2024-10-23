@@ -18,16 +18,18 @@ FetchContent_MakeAvailable(SFML)
 set(SRC_FILES
     src/main.cpp
     src/GameObject/GameObject.cpp
-    src/InputController/InputController.cpp
     src/Player/Player.cpp
+    src/InputController/InputController.cpp
+    
     src/Renderer/Renderer.cpp
 )
 
 set(HEADER_FILES
     src/Constants.h
     src/GameObject/GameObject.h
-    src/InputController/InputController.h
     src/Player/Player.h
+    src/InputController/InputController.h
+    
     src/Renderer/Renderer.h
 )
 

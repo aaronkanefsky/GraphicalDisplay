@@ -7,6 +7,7 @@
 
 int main()
 {
+    
     sf::RenderWindow window({WIDTH, HEIGHT}, "CMake SFML Project");
     window.setFramerateLimit(FRAMERATE);
 
@@ -46,11 +47,11 @@ int main()
         sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
         sf::Vector2f mousePosF(static_cast<float>(mousePosition.x), static_cast<float>(mousePosition.y));
 
-        // Adjust the vertices' positions based on the relative mouse position to create the POV effect
-        square[0].position = sf::Vector2f(mousePosF.x - 100, mousePosF.y - 100); // top-left
-        square[1].position = sf::Vector2f(mousePosF.x + 100, mousePosF.y - 100); // top-right
-        square[2].position = sf::Vector2f(mousePosF.x - 100, mousePosF.y + 100); // bottom-left
-        square[3].position = sf::Vector2f(mousePosF.x + 100, mousePosF.y + 100); // bottom-right
+        // define the position of the triangle's points
+        square[0].position = sf::Vector2f(mousePosF.x, mousePosF.y);
+        square[1].position = sf::Vector2f(100.f, 200.f);
+        square[2].position = sf::Vector2f(200.f, 100.f);
+        square[3].position = sf::Vector2f(200.f, 200.f);
 
         window.clear();
         
