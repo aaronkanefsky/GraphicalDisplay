@@ -3,13 +3,14 @@
 #include "InputController/InputController.h"
 #include "Player/Player.h"
 #include "Renderer/Renderer.h"
+#include "Constants.h"
 
 int main()
 {
-    sf::RenderWindow window({1920u, 1080u}, "CMake SFML Project");
-    window.setFramerateLimit(200);
+    sf::RenderWindow window({WIDTH, HEIGHT}, "CMake SFML Project");
+    window.setFramerateLimit(FRAMERATE);
 
-    // create an array of 4 vertices that define a quad
+    // create an array of 4 vertices that define a triangle strip
     sf::VertexArray square(sf::TriangleStrip, 4);
     sf::Mouse mouse;
     sf::Vector2 mouseLocation = mouse.getPosition(window);
