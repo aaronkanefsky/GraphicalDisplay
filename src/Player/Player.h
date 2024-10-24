@@ -28,9 +28,9 @@ public:
     int getLives() const;
 
     // Member Set functions
-
+    void setRotation();
     // Other
-
+    
 
 
 private:
@@ -40,7 +40,7 @@ private:
     int lives;                  // Number of lives for the player
     long int score;
     LaserEffect laserType;      // Type of powerup for the player's laser
-
+    sf::Sprite playerSprite;
 
 };
 

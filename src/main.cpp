@@ -10,6 +10,7 @@ int main()
     
     sf::RenderWindow window({WIDTH, HEIGHT}, "CMake SFML Project");
     window.setFramerateLimit(FRAMERATE);
+    Player player();
 
     // create an array of 4 vertices that define a triangle strip
     sf::VertexArray square(sf::TriangleStrip, 4);
