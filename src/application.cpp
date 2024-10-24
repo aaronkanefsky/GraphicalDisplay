@@ -3,14 +3,15 @@
 #include "InputController/InputController.h"
 #include "Player/Player.h"
 #include "Renderer/Renderer.h"
-#include "Constants.h"
+#include "application.h"
 
 int main()
 {
     
     sf::RenderWindow window({WIDTH, HEIGHT}, "CMake SFML Project");
     window.setFramerateLimit(FRAMERATE);
-    Player player();
+    Player player = Player();
+    setup(&player);
 
     // create an array of 4 vertices that define a triangle strip
     sf::VertexArray square(sf::TriangleStrip, 4);
@@ -59,4 +60,16 @@ int main()
         window.draw(square);
         window.display();
     }
+}
+
+void setup(Player* player){
+    // Init the graphics
+
+    // Spawn a player
+    // EX. player->spawn(0,0,0);
+
+}
+
+void applicationLoop(){
+
 }
